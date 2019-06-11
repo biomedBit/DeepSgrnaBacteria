@@ -26,7 +26,7 @@ def load_ckpt(sess, model_dir, variables_to_restore=None):
 with tf.variable_scope('ontar'):
     inputs_sg = tf.placeholder(dtype=tf.float32, shape=[None, 1, 23, 4])
     y_ = tf.placeholder(dtype=tf.float32, shape=[None, 1])
-    channel_size = [4, 32, 64, 64, 256, 256]
+    channel_size = [8, 32, 64, 64, 256, 256]
     betas = [None] + [tf.Variable(0.0 * tf.ones(channel_size[i]), name='beta_{0}'.format(i)) for i in
         range(1, len(channel_size))]
 
