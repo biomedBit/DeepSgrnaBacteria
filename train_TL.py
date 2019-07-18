@@ -29,7 +29,7 @@ if sys.argv[1] == "Eukaryon":
 	trainDataAll =  data_list_all_e(trainData,num=2)	
 	net = CNN_5()
 	net = net.cuda()
-	train_CNN_e(net,trainData,trainDataAll)
+	train_CNN_e(net,trainData,trainDataAll,Transfer_Learning = 1)
 	exit()
 '''
 
@@ -176,7 +176,7 @@ if NET[:3] == "CNN":
 	if NET == "CNN_7":
 		net = CNN_7()	
 	net = net.cuda()
-	train_CNN(net,trainData,trainDataAll,testDataAll,SET,ENZ,path)
+	train_CNN(net,trainData,trainDataAll,testDataAll,SET,ENZ,path,Transfer_Learning = 1)
 
 else:
 	print("<NET>: parameter exception!")

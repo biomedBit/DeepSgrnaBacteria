@@ -597,7 +597,9 @@ class CNN_8(nn.Module):
         return out
 
 
-def train_CNN(net,trainData,trainDataAll,testDataAll,Set,Enz,path):
+def train_CNN(net,trainData,trainDataAll,testDataAll,Set,Enz,path,Transfer_Learning = 0):
+	if Transfer_Learning == 1:
+		net.load_state_dict(torch.load("../saved_models/eSpCas9.pkl"))
 	net = net.cuda() 
 	criterion = torch.nn.MSELoss()
 	optimizer = torch.optim.Adam(net.parameters(), 0.001, betas=(0.9, 0.999), eps=1e-08)       
@@ -652,8 +654,10 @@ def train_CNN(net,trainData,trainDataAll,testDataAll,Set,Enz,path):
 		if e == stopEpch:
 			torch.save(net.state_dict(), path + "/" + str(e)  + "_" + str(train_spcc)[:7] + "_" + str(test_spcc)[:7] + ".pkl")
 			
-def train_CNN_e(net,trainData,trainDataAll):
+def train_CNN_e(net,trainData,trainDataAll,Transfer_Learning = 0):
 	#initNetParams(net)
+	if Transfer_Learning == 1:
+		net.load_state_dict(torch.load("../saved_models/eSpCas9.pkl"))
 	criterion = torch.nn.MSELoss()
 	optimizer = torch.optim.Adam(net.parameters(), 0.001, betas=(0.9, 0.999), eps=1e-08)       
 	for e in range(75):
