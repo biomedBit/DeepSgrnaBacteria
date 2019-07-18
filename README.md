@@ -81,6 +81,27 @@ python train_CNN.py Set2 knoRecA_Cas9 CNN_5 4
 python train_CNN.py Eukaryon
 ```
 
+##### Interpretability of models
+
+```
+cd Interpretability
+bash run.sh
+```
+
+##### Transfer learning
+
+```
+python train_TL.py <cv>
+```
+
+``<CV>``  Number of 5-fold Cross-validation
+
+- 1
+- 2
+- 3
+- 4
+- 5
+
 ##### Train Later LinearRegression Models
 
 ```
@@ -120,20 +141,35 @@ Score [10].
 
 
 ### References
+
 [1] Bae, S., Park, J., Kim, J.S.: Cas-offinder: a fast and versatile algorithm that searches for potential off-target sites of cas9 rna-guided endonucleases. Bioinformatics 30(10), 1473–1475 (2014)
+
 [2] Fu, L., Niu, B., Zhu, Z., Wu, S., Li, W.: Cd-hit: accelerated for clustering the next-generation sequencing data.
 Bioinformatics 28(23), 3150–3152 (2012)
+
 [3] Lorenz, R., Bernhart, S.H., Siederdissen, C.H.Z., Tafer, H., Flamm, C., Stadler, P.F., Hofacker, I.L.: Viennarna package 2.0. Algorithms for Molecular Biology 6, 26 (2011)
+
 [4]	Guo, J., Wang, T., Guan, C., Liu, B., Luo, C., Xie, Z., Zhang, C., Xing, X.H.: Improved sgrna design in bacteria via genome-wide activity profiling. Nucleic Acids Res 46(14), 7052–7069 (2018)
+
 [5] Singh, R., Kuscu, C., Quinlan, A., Qi, Y., Adli, M.: Cas9-chromatin binding information enables more accurate crispr off-target prediction. Nucleic Acids Res 43(18), 118 (2015)
+
 [6] Stemmer, M., Thumberger, T., Del Sol Keyer, M., Wittbrodt, J., Mateo, J.L.: Cctop: An intuitive, flexible and reliable crispr/cas9 target prediction tool. PLoS One 10(4), 0124633 (2015)
+
 [7] Lin, J., Wong, K.-C.: Off-target predictions in crispr-cas9 gene editing using deep learning. Bioinformatics 37(17), 656–663 (2018)
+
 [8] Hsu, P.D., Scott, D.A., Weinstein, J.A., Ran, F.A., Konermann, S., Agarwala, V., Li, Y., Fine, E.J., Wu, X., Shalem, O., Cradick, T.J., Marraffini, L.A., Bao, G., Zhang, F.: Dna targeting specificity of rna-guided cas9 nucleases. Nature biotechnology 31(9), 827–832 (2013)
-[9] Haeussler, M., Kai, S., Eckert, H., Eschstruth, A., Miann´ e, J., Renaud, J.B., Schneider-Maunoury, S., Shkumatava, A., Teboul, L., Kent, J.: Evaluation of off-target and on-target scoring algorithms and integration into the guide rna selection tool crispor. Genome Biology 17(1), 148 (2016).
+
+[9] Haeussler, M., Kai, S., Eckert, H., Eschstruth, A., Miann´ e, J., Renaud, J.B., Schneider-Maunoury, S., Shkumatava, A., Teboul, L., Kent, J.: Evaluation of off-target and on-target scoring algorithms and integration into the guide rna selection tool crispor. Genome Biology 17(1), 148 (2016)
+
 [10] Doench, J.G., Fusi, N., Sullender, M., Hegde, M., Vaimberg, E.W., Donovan, K.F., Smith, I., Tothova, Z., Wilen, C., Orchard, R.: Optimized sgrna design to maximize activity and minimize off-target effects of crispr-cas9. Nature Biotechnology 34(2), 184–191 (2016)
+
 [11] Chuai, G., Ma, H., Yan, J., Ming, C., Hong, N., Xue, D., Chi, Z., Zhu, C., Ke, C., Duan, B.: Deepcrispr: optimized crispr guide rna design by deep learning. Genome Biology 19(1), 80 (2018)
+
 [12] Peng, H., Zheng, Y., Blumenstein, M., Tao, D., Li, J.: Crispr/cas9 cleavage efficiency regression through boosting algorithms and markov sequence profiling. Bioinformatics 34(18), 3069–3077 (2018)
+
 [13] Xue, L., Tang, B., Chen, W., Luo, J.S.: Prediction of crispr sgrna activity using a deep convolutional neural network. Journal of Chemical Information and Modeling 59(1), 615–624 (2019)
+
 [14] Kim, H.K., Min, S., Song, M., Jung, S., Choi, J.W., Kim, Y., Lee, S., Yoon, S., Kim, H.H.: Deep learning improves prediction of crispr-cpf1 guide rna activity. Nat Biotechnol 36(3), 239–241 (2018)
+
 
 

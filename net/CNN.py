@@ -653,7 +653,7 @@ def train_CNN(net,trainData,trainDataAll,testDataAll,Set,Enz,path):
 			torch.save(net.state_dict(), path + "/" + str(e)  + "_" + str(train_spcc)[:7] + "_" + str(test_spcc)[:7] + ".pkl")
 			
 def train_CNN_e(net,trainData,trainDataAll):
-	initNetParams(net)
+	#initNetParams(net)
 	criterion = torch.nn.MSELoss()
 	optimizer = torch.optim.Adam(net.parameters(), 0.001, betas=(0.9, 0.999), eps=1e-08)       
 	for e in range(75):
